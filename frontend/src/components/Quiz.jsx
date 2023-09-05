@@ -1,16 +1,21 @@
 import React, { useEffect } from 'react'
 import { Questions } from './Questions'
-import {useSelector} from 'react-redux'
+import {useSelector,useDispatch} from 'react-redux'
+import { MoveNextQuestion,MovePrevQuestion } from '../hooks/fetchQuestions'
 export const Quiz = () => {
-    function next(){
+  const dispach=useDispatch()
 
+    function next(){
+      console.log("clicking next");
+      
+      dispach(MoveNextQuestion())
     }
     function prev(){
-
+      dispach(MovePrevQuestion())
     }
-   const state= useSelector(state=>state)
+   const  trace= useSelector(state=>state.questions.trace)
    useEffect(()=>{
-    console.log(state);
+    console.log(trace);
    })
 
   return (
@@ -19,7 +24,7 @@ export const Quiz = () => {
          text-l'>Quiz</h1>
          <Questions/>
          <div className="grid">
-            <button className="btn prev" onClick={prev}>Back</button>
+            <button className={`btn prev ${trace <= 0 ? 'disabled' : ''}`} disabled={trace===0}  onClick={prev}>Back</button>
             <button className="btn next" onClick={next}>Next</button>
          </div>
     </div>

@@ -47,3 +47,7 @@ table {
 .table-header > tr > td{
     border: 1px solid #faff5a;   
 }
+/* .disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  } */

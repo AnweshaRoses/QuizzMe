@@ -12,7 +12,7 @@ export const Questions = () => {
     const questions= useSelector(state=>state.questions.queue[state.questions.trace])
     // const trace=useSelector(state=>state.questions.trace)
     useEffect(()=>{
-     console.log(questions);
+    //  console.log(questions);
     })
  
     
