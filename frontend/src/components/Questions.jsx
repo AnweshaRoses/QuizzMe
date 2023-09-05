@@ -1,10 +1,24 @@
 import React , {useState,useEffect}from 'react'
-import englishQuizData from '../dummy'
+
+
+import { useFetchQuestions } from '../hooks/fetchQuestions'
+import { useSelector } from 'react-redux'
+
 
 export const Questions = () => {
     const [Check, setCheck] = useState(undefined)
-    const question=englishQuizData[0]
+    const [{isLoading,apiData,serverError}]=useFetchQuestions()
 
+    const questions= useSelector(state=>state.questions.queue[state.questions.trace])
+    // const trace=useSelector(state=>state.questions.trace)
+    useEffect(()=>{
+     console.log(questions);
+    })
+ 
+    
+   if(isLoading) return <h3 className='text-l'>isLoading</h3>
+   if(serverError) return <h3 className='text-l'>{serverError||"Unkown Error"}</h3>
+    
     
     function onChange(){
 
@@ -12,10 +26,10 @@ export const Questions = () => {
   return (
     <div className="questions">
         <h2 className='
-         text-l'>{question.question}</h2>
-         <ul key={question.id}>
+         text-l'>{questions?.question}</h2>
+         <ul key={questions?.id}>
             {
-                question.options.map((q,i)=>(
+                questions?.options.map((q,i)=>(
                     <li key={i}>
                     <input type="radio"
                     value={true}
