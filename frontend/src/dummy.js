@@ -53,3 +53,4 @@ const englishQuizData = [
   
   export default englishQuizData;
   
+  export const answers=[0,1,2,1,0];

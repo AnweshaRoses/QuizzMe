@@ -5,7 +5,7 @@ import { MoveNextQuestion,MovePrevQuestion } from '../hooks/fetchQuestions'
 import { PushAns } from '../hooks/setResult'
 import {Navigate} from 'react-router-dom'
 export const Quiz = () => {
-  const [check, setCheck] = useState(undefined)
+  const [check, setChecked] = useState(undefined)
 
   const dispach=useDispatch()
   const {trace,queue} = useSelector(state=>state.questions)
@@ -15,7 +15,10 @@ export const Quiz = () => {
       if(trace<queue.length){
       
         dispach(MoveNextQuestion())
-        dispach(PushAns(check))
+        if(result.length<=trace){
+          dispach(PushAns(check))
+
+        }
       }
 
     }
@@ -24,11 +27,11 @@ export const Quiz = () => {
     }
 
    function onChecked(checked){
-      console.log(checked);
-      setCheck(checked)
+      // console.log(checked);
+      setChecked(checked)
    }
    useEffect(()=>{
-    console.log(result);
+    // console.log(result);
    })
 
   //  Finish Exam After Last Question is done 
