@@ -5,7 +5,7 @@ import { useFetchQuestions } from '../hooks/fetchQuestions'
 import { useSelector } from 'react-redux'
 
 
-export const Questions = () => {
+export const Questions = ({onChecked}) => {
     const [Check, setCheck] = useState(undefined)
     const [{isLoading,apiData,serverError}]=useFetchQuestions()
 
@@ -20,9 +20,10 @@ export const Questions = () => {
    if(serverError) return <h3 className='text-l'>{serverError||"Unkown Error"}</h3>
     
     
-    function onChange(){
-
+    function onChange(i){
+      onChecked(i)
     }
+   
   return (
     <div className="questions">
         <h2 className='
@@ -35,7 +36,7 @@ export const Questions = () => {
                     value={true}
                     name="options"
                     id={`q${i}-option`}
-                     onChange={onChange()} 
+                     onChange={()=>onChange(i)} 
                     />
                     <label className='text-primary' htmlFor={`q${i}-option`}>{q}</label>
                     <div className="check "></div>
