@@ -32,3 +32,32 @@
     border-radius: 3px;
     font-size: 1em;
 }
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: flex-end;
+  }
+
+
+
+  .topright{
+    display: flex;
+    align-items: center;
+}
+.topbariconcontainer{
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #b9b8b8;
+}
+.topavatar{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+  
+
+  
+

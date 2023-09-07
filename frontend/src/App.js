@@ -1,9 +1,10 @@
 
 import './App.css';
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import {createBrowserRouter, RouterProvider,useLocation} from 'react-router-dom'
 import { Root } from './components/Root';
 import { Quiz } from './components/Quiz';
 import { Result } from './components/Result';
+import Navbar from './components/Navbar';
 
 const router=createBrowserRouter([
 {
