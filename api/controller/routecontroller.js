@@ -22,7 +22,29 @@ const UserController = {
     } catch (err) {
       res.status(500).json({ response: 'fail', msg: 'User Data could not be fetched!' });
     }
-  }
+  },
+  getResult:async(req,res)=>{
+    try {
+      res.status(200).json({ response: 'success', msg:'Get Result'});
+    } catch (err) {
+      res.status(500).json({ response: 'fail', msg: 'User Data could not be fetched!' });
+    }
+  },
+  insertResult:async(req,res)=>{
+    try {
+      res.status(200).json({ response: 'success', msg:'result post req'});
+    } catch (err) {
+      res.status(500).json({ response: 'fail', msg: 'User Data could not be fetched!' });
+    }
+  },
+  deleteResult:async(req,res)=>{
+    try {
+      res.status(200).json({ response: 'success', msg:'result delete req'});
+    } catch (err) {
+      res.status(500).json({ response: 'fail', msg: 'User Data could not be fetched!' });
+    }
+  },
+
 };
 
 module.exports = UserController;
