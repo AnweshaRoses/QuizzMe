@@ -22,7 +22,9 @@
 #form{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 4em;
+    flex-direction: column;
 }
 
 #form .userid{
@@ -32,6 +34,22 @@
     border-radius: 3px;
     font-size: 1em;
 }
+label {
+    font-size: 1.2em;
+    color: #cecece;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  
+  /* Style the language selection dropdown */
+  #languageSelect {
+    padding: 2px;
+    border: 1px solid #cecece;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    max-width: 200px; /* Adjust the width as needed */
+  }
 .profile {
     display: flex;
     align-items: center;

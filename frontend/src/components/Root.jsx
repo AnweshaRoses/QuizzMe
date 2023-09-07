@@ -5,7 +5,11 @@ import './root.css'
 export const Root = () => {
     const inputRef=useRef(null)
 
-
+    const [selectedLanguage, setSelectedLanguage] = useState('English');
+    
+    const handleLanguageChange = (event) => {
+    setSelectedLanguage(event.target.value);
+  };
 
   return (
     <div className='container'>
@@ -30,9 +34,19 @@ export const Root = () => {
             <li>You can Navigate Back and Forth between the questions</li>
             <li>Result will be Displayed after the Quiz Ends</li>
         </ol>
-        <form  id="form">
-            <input ref={inputRef} type="text" placeholder='Username*' />
-        </form>
+        <form id='form'>
+  <label htmlFor='languageSelect'>Select Language:</label>
+  <select
+    id='languageSelect'
+    value={selectedLanguage}
+    onChange={handleLanguageChange}
+  >
+    <option value='English'>English</option>
+    <option value='French'>French</option>
+    <option value='Spanish'>Spanish</option>
+    {/* Add more language options here */}
+  </select>
+</form>
         <div className="start">
         <Link className='btn' to={'Quiz'}>Start Quiz</Link>
         </div>
