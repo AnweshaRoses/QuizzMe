@@ -1,0 +1,92 @@
+:root {
+    --primary-color: #0DFF92;
+    --dark-color: #222222;
+    --light-color: #f0f0f0;
+  }
+  
+  .auth-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222222; /* Use your light color for the background */
+    color: #f0f0f0 /* Use your dark color for text */
+  }
+  
+  .auth-title {
+    font-size: 36px; /* Increase font size for "Word Wizard" */
+    margin-bottom: 20px;
+    color: #0DFF92 /* Use your dark color for the title */
+  }
+  
+  .auth-form {
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(124, 124, 124, 0.2);
+    text-align: center;
+  }
+  
+  .auth-subtitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--light-color); /* Use your dark color for the subtitle */
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #555; /* Set your label color */
+  }
+  
+  input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Set your input border color */
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .auth-button {
+    color: #202020 !important;
+    background-color: #faff5a; /* Set your button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-button:hover {
+    background-color: #09cc7a; /* Set your button hover color */
+  }
+  
+  .auth-info {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777; /* Set your info text color */
+  }
+  
+  .auth-info a {
+    color: #0DFF92; /* Set your link color */
+    text-decoration: none;
+  }
+  
+  .auth-info a:hover {
+    text-decoration: underline;
+  }
+  This is the corresponding css file for it Now based on this :root{
+  --primary-color: #0DFF92;
+  --dark-color:#222222;
+  --light-color: #f0f0f0;
+}
+  

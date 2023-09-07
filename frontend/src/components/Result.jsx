@@ -43,7 +43,7 @@ export const Result = () => {
             </div>
          </div>
          <div className="start">
-            <Link className='btn' to={'/'} onClick={onRestart}>Restart</Link>
+            <Link className='btn' to={'/start'} onClick={onRestart}>Restart</Link>
          </div>
          <div className="container">
            <ResultTable></ResultTable>

@@ -174,22 +174,3 @@ input[type=radio]:checked ~ .text-primary{
     background-color: #ccc;
     cursor: not-allowed !important;
   }
-  .navbar {
-    background-color: #222222;
-    padding: 10px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  .profile-picture {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-right: 10px;
-  }
-  
-  .profile-picture:hover {
-    border: 2px solid var(--primary-color); /* Change to your desired color */
-  }
