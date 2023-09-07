@@ -20,7 +20,7 @@ export const Quiz = () => {
 
         }
       }
-
+      setChecked(undefined)
     }
     function prev(){
       dispach(MovePrevQuestion())
