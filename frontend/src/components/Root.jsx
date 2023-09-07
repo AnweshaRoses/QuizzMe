@@ -6,7 +6,7 @@ export const Root = () => {
     const inputRef=useRef(null)
 
     const [selectedLanguage, setSelectedLanguage] = useState('English');
-    
+
     const handleLanguageChange = (event) => {
     setSelectedLanguage(event.target.value);
   };
@@ -18,7 +18,9 @@ export const Root = () => {
                     <div className="topbariconcontainer">
                         <spam className="topiconbag">Anwesha Mishra</spam>
                     </div>
+                    <Link to='/edit'>
                     <img src="https://images.unsplash.com/photo-1517070208541-6ddc4d3efbcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="" className="topavatar" />
+                    </Link>
                 </div>
               
 

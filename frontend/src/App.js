@@ -5,6 +5,7 @@ import { Root } from './components/Root';
 import { Quiz } from './components/Quiz';
 import { Result } from './components/Result';
 import Login from './components/Login';
+import EditUser from './components/EditUser';
 
 
 const router=createBrowserRouter([
@@ -23,6 +24,10 @@ const router=createBrowserRouter([
 {
   path:'/result',
   element:<Result></Result>
+},
+{
+  path:'/edit',
+  element:<EditUser></EditUser>
 },
 ])
 function App() {
