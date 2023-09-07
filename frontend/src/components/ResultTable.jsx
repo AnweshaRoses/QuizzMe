@@ -10,14 +10,12 @@ export const ResultTable = () => {
                         Name
                     </td>
                     <td>
-                        Attempts
+                        Questions Attempted
                     </td>
                     <td>
-                        Earn Points
+                        Total Points
                     </td>
-                    <td>
-                        Result
-                    </td>
+
                 </tr>
             </thead>
             <tbody >
@@ -25,7 +23,7 @@ export const ResultTable = () => {
                     <td>Anwesha</td>
                     <td>03</td>
                     <td>20</td>
-                    <td>Passed</td>
+
                 </tr>
             </tbody>
         </table>

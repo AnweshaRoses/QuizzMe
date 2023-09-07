@@ -31,15 +31,15 @@ export const Result = () => {
             </div>
             <div className="flex">
                 <span>Total Questions</span>
-                <span className='bold'>05</span>
+                <span className='bold'>{queue.length||0}</span>
             </div>
             <div className="flex">
-                <span>Total Attempts</span>
-                <span className='bold'>03</span>
+                <span>Questions Attempted</span>
+                <span className='bold'>{attempts||0}</span>
             </div>
             <div className="flex">
                 <span>Total Points</span>
-                <span className='bold'>03</span>
+                <span className='bold'>{earnPoints||0}</span>
             </div>
          </div>
          <div className="start">
