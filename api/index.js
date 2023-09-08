@@ -7,14 +7,7 @@ const dotenv=require("dotenv")
 const quesRoutes=require("./routes/route")
 dotenv.config()
 
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-
-    next();
-  });
   app.use(cors());
-
-
   app.use("/api",quesRoutes);
 
 mongoose.connect(process.env.MONGO_URL ,{dbName: "Quiz"}

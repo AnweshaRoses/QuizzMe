@@ -2,13 +2,19 @@ import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Quiz } from './Quiz'
 import './root.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { setLanguage } from '../redux/languageReducer'
+
 export const Root = () => {
+  const dispatch = useDispatch();
+  const selectedLanguage = useSelector((state) => state.language);
     const inputRef=useRef(null)
 
-    const [selectedLanguage, setSelectedLanguage] = useState('English');
 
     const handleLanguageChange = (event) => {
-    setSelectedLanguage(event.target.value);
+      const newLanguage = event.target.value;
+      console.log(newLanguage);
+      dispatch(setLanguage(newLanguage));
   };
 
   return (
@@ -16,7 +22,7 @@ export const Root = () => {
             <div className="profile" >
             <div className="topright">
                     <div className="topbariconcontainer">
-                        <spam className="topiconbag">Anwesha Mishra</spam>
+                        <span className="topiconbag">Anwesha Mishra</span>
                     </div>
                     <Link to='/edit'>
                     <img src="https://images.unsplash.com/photo-1517070208541-6ddc4d3efbcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="" className="topavatar" />
@@ -50,7 +56,7 @@ export const Root = () => {
   </select>
 </form>
         <div className="start">
-        <Link className='btn' to={'Quiz'}>Start Quiz</Link>
+        <Link className='btn' to='/quiz'>Start Quiz</Link>
         </div>
     </div>
   )

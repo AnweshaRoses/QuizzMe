@@ -5,7 +5,7 @@ const router = express.Router();
 const UserController = require('../controller/routecontroller');
 
 // Question Routes
-router.get('/questions', UserController.getQuestions);
+router.get('/English', UserController.getQuestions);
 router.post('/questions',UserController.insertQuestions );
 router.delete('/questions',UserController.deleteQuestions );
 

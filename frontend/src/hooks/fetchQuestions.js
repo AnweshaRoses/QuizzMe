@@ -2,6 +2,7 @@ import { useState ,useEffect} from "react"
 import englishQuizData,{answers} from "../dummy"
 import { useDispatch } from 'react-redux';
 import * as Action from '../redux/questionReducer'
+import { getserverData } from "../helper/helper";
 
 export const useFetchQuestions=()=>{
     const dispach=useDispatch()
@@ -11,6 +12,7 @@ export const useFetchQuestions=()=>{
         (async () =>{
             try{
                 let question = await englishQuizData;
+                
                 if(question.length>0){
                     setGetData(prev=>({...prev,isLoading:false}));
                     setGetData(prev=>({...prev,apiData:{question,answers}}));
